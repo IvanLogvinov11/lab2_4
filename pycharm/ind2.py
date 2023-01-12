@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -- coding: utf-8 --
+
 import sys
 
 if __name__ == '__main__':
@@ -10,9 +11,9 @@ if __name__ == '__main__':
     min_a = a[0]
     pos = 0
 
-    for i in range(0, len(a)):
-        if a[i] < min_a:
-            min_a = a[i]
+    for i, item in enumerate(a):
+        if item < min_a:
+            min_a = item
             min_i = i
 
     for i in a:
@@ -22,10 +23,10 @@ if __name__ == '__main__':
         else:
             break
 
-    for i in range(0, len(a)):
-        if (a[i] >= in1) and (a[i] <= in2):
-            a.remove(a[i])
+    for i, item in enumerate(a):
+        if (item >= in1) and (item <= in2):
+            a.remove(item)
             a.append(0)
-    for i in range(0, len(a)):
-        print(a[i])
+    for i, item in enumerate(a):
+        print(item)
     print('\nminimum is: ', min_a , 'sum is', pos)
